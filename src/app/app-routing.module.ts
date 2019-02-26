@@ -14,7 +14,12 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  {
+    path: 'consulterCheval/:id',
+    loadChildren: './consulter-cheval/consulter-cheval.module#ConsulterChevalPageModule'
+  },
+  { path: 'consulter-cheval', loadChildren: './consulter-cheval/consulter-cheval.module#ConsulterChevalPageModule' }
 ];
 
 @NgModule({

@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter un cheval</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Nom</ion-label>
+    <ion-input [(ngModel)]="nom"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="addCheval()">Ajouter</ion-button>
+</ion-content>

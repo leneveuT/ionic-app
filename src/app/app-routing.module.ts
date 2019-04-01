@@ -19,7 +19,9 @@ const routes: Routes = [
     path: 'consulterCheval/:id',
     loadChildren: './consulter-cheval/consulter-cheval.module#ConsulterChevalPageModule'
   },
-  { path: 'consulter-cheval', loadChildren: './consulter-cheval/consulter-cheval.module#ConsulterChevalPageModule' }
+  { path: 'consulter-cheval', loadChildren: './consulter-cheval/consulter-cheval.module#ConsulterChevalPageModule' },
+  { path: 'cheval/ajouter', loadChildren: './cheval/ajouter/ajouter.module#AjouterPageModule' }
+
 ];
 
 @NgModule({

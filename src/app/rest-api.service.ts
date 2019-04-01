@@ -50,4 +50,17 @@ private extractData(res: Response) {
       catchError(this.handleError)
     );
   }
+
+  addCheval(nom: string): Observable<any> {
+    const url = `${apiUrl}/cheval/create.php`;
+    let postData = new FormData();
+    postData.append('id', 100);
+    postData.append('nom', nom);
+    postData.append('sexe', 'M');
+    postData.append('prixDepart', 10000);
+
+    return this.http.post(url, postData).pipe(
+    map(this.extractData),
+    catchError(this.handleError));
+    }
 }

@@ -11,6 +11,7 @@ Liste des chevaux
 
 <ion-content>
 <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-button href="/cheval/ajouter">Ajouter</ion-button>
 <ion-list>
 <ion-item *ngFor="let cheval of chevaux" routerLink="/consulterCheval/{{cheval.id}}">
 

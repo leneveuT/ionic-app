@@ -51,13 +51,13 @@ private extractData(res: Response) {
     );
   }
 
-  addCheval(nom: string): Observable<any> {
+  addCheval(id : string, nom : string, sexe : string, prixDepart : string): Observable<any> {
     const url = `${apiUrl}/cheval/create.php`;
     let postData = new FormData();
-    postData.append('id', 100);
-    postData.append('nom', nom);
-    postData.append('sexe', 'M');
-    postData.append('prixDepart', 10000);
+    postData.append('id', id);
+    postData.append('nom', 'nom');
+    postData.append('sexe', sexe);
+    postData.append('prixDepart', prixDepart);
 
     return this.http.post(url, postData).pipe(
     map(this.extractData),

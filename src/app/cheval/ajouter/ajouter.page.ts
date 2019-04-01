@@ -9,7 +9,10 @@ import { RestApiService } from '../../rest-api.service';
 })
 export class AjouterPage implements OnInit {
 
+  id : string
   nom : string
+  sexe : string
+  prixDepart : string
 
   constructor(public api: RestApiService, public loadingController: LoadingController) { }
 
@@ -22,7 +25,7 @@ export class AjouterPage implements OnInit {
     });
     await loading.present();
 
-    await this.api.addCheval(this.nom)
+    await this.api.addCheval(this.id, this.nom, this.sexe, this.prixDepart)
     .subscribe(res => {
       loading.dismiss();
     }, err => {

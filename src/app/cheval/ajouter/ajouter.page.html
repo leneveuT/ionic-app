@@ -6,8 +6,20 @@
 
 <ion-content padding>
   <ion-item>
+    <ion-label>Id</ion-label>
+    <ion-input [(ngModel)]="id"></ion-input>
+  </ion-item>
+  <ion-item>
     <ion-label>Nom</ion-label>
     <ion-input [(ngModel)]="nom"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Sexe</ion-label>
+    <ion-input [(ngModel)]="sexe"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Prix de départ</ion-label>
+    <ion-input [(ngModel)]="prixDepart"></ion-input>
   </ion-item>
 
   <ion-button (click)="addCheval()">Ajouter</ion-button>

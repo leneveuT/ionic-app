@@ -24,6 +24,11 @@ export class AppComponent {
       title: 'Ajouter',
       url: '/cheval/ajouter',
       icon: 'add'
+    },
+    {
+      title: 'Lister les clients',
+      url: '/client/lister',
+      icon: 'list'
     }
   ];
 

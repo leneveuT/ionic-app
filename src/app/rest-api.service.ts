@@ -63,4 +63,14 @@ private extractData(res: Response) {
     map(this.extractData),
     catchError(this.handleError));
     }
+
+
+    getClients(): Observable<any> {
+      const url = `${apiUrl}/client/readAll.php`;
+      console.log('url ' + url);
+      return this.http.get(url, httpOptions).pipe(
+        map(this.extractData),
+        catchError(this.handleError)
+      );
+    }
 }

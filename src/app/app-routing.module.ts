@@ -20,7 +20,9 @@ const routes: Routes = [
     loadChildren: './consulter-cheval/consulter-cheval.module#ConsulterChevalPageModule'
   },
   { path: 'consulter-cheval', loadChildren: './consulter-cheval/consulter-cheval.module#ConsulterChevalPageModule' },
-  { path: 'cheval/ajouter', loadChildren: './cheval/ajouter/ajouter.module#AjouterPageModule' }
+  { path: 'cheval/ajouter', loadChildren: './cheval/ajouter/ajouter.module#AjouterPageModule' },
+  { path: 'client/lister', loadChildren: './client/lister/lister.module#ListerPageModule' }
+
 
 ];
 
